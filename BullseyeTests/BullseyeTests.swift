@@ -1,17 +1,24 @@
-//
-//  BullseyeTests.swift
-//  BullseyeTests
-//
-//  Created by Tianchi "Maverick" Wu on 8/15/25.
-//
-
 import Testing
 @testable import Bullseye
 
+@MainActor
 struct BullseyeTests {
+  var game: Game
+
+  init() {
+    game = Game()
+  }
   
-  @Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+  @Test func scoreIsCorrectWhenGuessAboveTarget() async throws {
+    let guess = game.target + 5
+    let score = game.points(sliderValue: guess)
+    #expect(score == 95)
+  }
+  
+  @Test func scoreIsCorrectWhenGuessBelowTarget() async throws {
+    let guess = game.target - 5
+    let score = game.points(sliderValue: guess)
+    #expect(score == 95)
   }
   
 }

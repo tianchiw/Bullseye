@@ -1,14 +1,7 @@
-//
-//  Game.swift
-//  Bullseye
-//
-//  Created by Tianchi "Maverick" Wu on 8/18/25.
-//
-
 import Foundation
 
 struct Game {
-  var target: Int = 27
+  var target: Int = Int.random(in: 1...100)
   var score: Int = 0
   var round: Int = 1
   

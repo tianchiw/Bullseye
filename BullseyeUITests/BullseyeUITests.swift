@@ -1,10 +1,3 @@
-//
-//  BullseyeUITests.swift
-//  BullseyeUITests
-//
-//  Created by Tianchi "Maverick" Wu on 8/15/25.
-//
-
 import XCTest
 
 final class BullseyeUITests: XCTestCase {
